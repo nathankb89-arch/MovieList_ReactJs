@@ -1,0 +1,63 @@
+## 1. Project Architecture
+To satisfy the **Component-Based Structure** requirement, you should organize your files like this:
+
+<!-- *   `App.js`: The "Source of Truth" where your state lives.
+*   `MovieList.js`: A container that maps through the data.
+*   `MovieItem.js`: The visual representation of a single movie.
+*   `MovieForm.js`: A component to handle adding new entries. -->
+
+
+
+---
+
+## 2. Core Logic (Data & Rendering)
+In your `App.js`, you'll initialize your state with an array of objects. To handle **Interactivity**, you'll need the `useState` hook.
+
+<!-- ```javascript
+const [movies, setMovies] = useState([
+  { id: 1, title: "Inception", genre: "Sci-Fi" },
+  { id: 2, title: "The Godfather", genre: "Crime" }
+]);
+``` -->
+
+### Dynamic Rendering
+Inside `MovieList.js`, use the `.map()` function. **Don't forget the `key` prop**—React needs it to track which items change or get deleted.
+
+<!-- ```javascript
+{movies.map(movie => (
+  <MovieItem 
+    key={movie.id} 
+    movie={movie} 
+    onDelete={deleteMovie} 
+  />
+))} -->
+```
+
+---
+
+## 3. Implementation Checklist
+
+| Feature | Tip for Implementation |
+| :--- | :--- |
+| **Adding Items** | Use a form with `onChange` to update local state, then pass the new object to the main `movies` state on submit. |
+| **Deleting Items** | Use `.filter()` to create a new array excluding the ID of the item you clicked. |
+| **Git Commits** | **Don't do one giant commit.** Commit after: Initial setup, Creating the data array, Adding the Map function, Styling the header, etc. |
+| **Deployment** | **Vercel** is the easiest for React. Connect your GitHub repo, and it will deploy automatically every time you push. |
+
+---
+
+## 4. Suggested Workflow to Ace the Rubric
+
+1.  **Initialize:** Run `npx create-react-app my-project` and push to GitHub immediately.
+2.  **Statics:** Create your mock data array and get it to display on the screen using `.map()`.
+3.  **Components:** Break the `map` logic out into a separate `MovieItem` component. (That’s 2 points!).
+4.  **Interactivity:** Add a "Delete" button. This is the easiest way to prove you understand state updates.
+5.  **Styling:** Use **Flexbox** or **CSS Grid** to make the list look like a clean gallery rather than a plain vertical list.
+6.  **The "Commit" Polish:** Even if you finish quickly, go back and make small tweaks to your CSS or README to ensure you hit that **10-commit minimum**.
+
+---
+
+## Pro-Tip for the Bonus
+If you want the bonus points for **API Fetching**, swap your static array for a `useEffect` hook that calls the [TMDB API](https://www.themoviedb.org/documentation/api) or even a simple JSON placeholder. It makes the project look much more professional!
+
+How are you planning to handle the styling—standard CSS files, or are you thinking about trying something like Tailwind?
