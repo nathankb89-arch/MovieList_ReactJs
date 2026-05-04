@@ -1,0 +1,37 @@
+.app-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.movie-form {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.movie-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.delete-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #cc0000;
+}
