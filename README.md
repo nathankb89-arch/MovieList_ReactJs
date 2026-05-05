@@ -1,9 +1,4 @@
-A simple, interactive React application designed to manage a collection of movies. This project demonstrates foundational React concepts, including component-based architecture, state management with hooks, and dynamic data rendering.
-
-## 🚀 Live Demo
-[**View the Live Project**](INSERT_YOUR_DEPLOYMENT_LINK_HERE)
-
----
+A simple, interactive React application designed to manage a collection of movies. This project demonstrates foundational React concepts, including component-based architecture, state management with hooks, and dynamic data rendering
 
 ## ✨ Features
 * **Component-Based Architecture:** Modular code structure using separate files for the List, Items, and Forms.
